@@ -1,0 +1,204 @@
+{
+  "def" : {
+    "prefix": "d",
+    "body": [
+      "def ${1:method_name}",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "def with args" : {
+    "prefix": "da",
+    "body": [
+      "def ${1:method_name}(${2:args})",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "pry debugger" : {
+    "prefix": "pry",
+    "body": [
+      "require 'pry'; binding.pry"
+    ]
+  },
+
+  "class": {
+    "prefix": "cl",
+    "body": [
+      "class ${1:MyClass}",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "each oneline": {
+    "prefix": ".e",
+    "body": [
+      ".each { |${1:args}| $0 }"
+    ]
+  },
+
+  "each multi line": {
+    "prefix": ".ee",
+    "body": [
+      ".each do |${1:args}|",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "each_with_index oneline": {
+    "prefix": ".ei",
+    "body": [
+      ".each_with_index { |${1:item}, index| $0 }"
+    ]
+  },
+
+  "each_with_index multi line": {
+    "prefix": ".ee",
+    "body": [
+      ".each_with_index do |${1:item}, index|",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "map oneline": {
+    "prefix": ".m",
+    "body": [
+      ".map { |${1:args}| $0 }"
+    ]
+  },
+
+  "map multi line": {
+    "prefix": ".mm",
+    "body": [
+      ".map do |${1:args}|",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "select oneline": {
+    "prefix": ".s",
+    "body": [
+      ".select { |${1:args}| $0 }"
+    ]
+  },
+
+  "select multi line": {
+    "prefix": ".ss",
+    "body": [
+      ".select do |${1:args}|",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "class with init": {
+    "prefix": "cli",
+    "body": [
+      "class ${1:MyClass}",
+      "\tdef initialize(${2:args})",
+      "\t\t$0",
+      "\tend",
+      "end"
+    ]
+  },
+
+  "module": {
+    "prefix": "mod",
+    "body": [
+      "module ${1:MyClass}",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "instance variable": {
+    "prefix": "ins",
+    "body": [
+      "@${1:key} = $1"
+    ]
+  },
+
+  "rspec: let": {
+    "prefix": "let",
+    "body": [
+      "let(:${1:foo}) { ${2:bar} }$0",
+    ]
+  },
+
+  "rspec: it": {
+    "prefix": "it",
+    "body": [
+      "it '${1:should do a thing}' do",
+      "\t${2:# expectations...}",
+      "end"
+    ]
+  },
+
+  "rspec: it { is_expected.to eql }" : {
+    "prefix": "iteq",
+    "body": [
+      "it { is_expected.to eql($1) }"
+    ]
+  },
+
+  "rspec: it { is_expected.to be }" : {
+    "prefix": "itbe",
+    "body": [
+      "it { is_expected.to be($1) }"
+    ]
+  },
+
+  "rspec: context" : {
+    "prefix": "con",
+    "body": [
+      "context '${1:with an excellent haircut}' do",
+      "\t${2:# examples...}",
+      "end"
+    ]
+  },
+
+  "rspec: subject" : {
+    "prefix": "sub",
+    "body": [
+      "subject { $1 }"
+    ]
+  },
+
+  "rspec: before oneline" : {
+    "prefix": "be",
+    "body": [
+      "before { $0 }"
+    ]
+  },
+
+  "rspec: before multi line" : {
+    "prefix": "bef",
+    "body": [
+      "before(${1|:all,:each,:suite,:context,:example|}) do",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "rspec: describe" : {
+    "prefix": "desc",
+    "body": [
+      "describe '${1:#some_method}' do",
+      "\t$0",
+      "end"
+    ]
+  },
+
+  "rspec: and_return" : {
+    "prefix": ".ar",
+    "body": [
+      ".and_return(${1:some_value})"
+    ]
+  }
+}
