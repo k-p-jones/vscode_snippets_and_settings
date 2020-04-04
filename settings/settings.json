@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "workbench.colorTheme": "Community Material Theme Palenight High Contrast",
+  "editor.fontSize": 14,
+  "editor.suggestLineHeight": 24,
+  "editor.letterSpacing": 0.7,
+  "editor.cursorStyle": "block",
+  "emmet.includeLanguages": {"erb": "html"},
+  "workbench.colorCustomizations": {
+    "editorLineNumber.foreground": "#fcba03"
+  }
+}
